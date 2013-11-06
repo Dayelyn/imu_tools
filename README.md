@@ -29,6 +29,8 @@ Download the stack from our repository:
 
     git clone https://github.com/ccny-ros-pkg/imu_tools.git
 
+Checkout branch corresponding to your ros version.
+
 Install any dependencies using [rosdep](http://www.ros.org/wiki/rosdep).
 
     rosdep install imu_tools
@@ -36,6 +38,20 @@ Install any dependencies using [rosdep](http://www.ros.org/wiki/rosdep).
 Compile the stack:
 
     rosmake imu_tools
+
+Troubleshooting
+-----------------------------------
+
+If you run into trouble using `rosdep install imu_tools`:
+
+    ERROR: the following packages/stacks could not have their rosdep keys resolved
+    to system dependencies:
+    rviz_imu_plugin: Missing resource cmake_modules
+
+Resolve with:
+
+    sudo apt-get install ros-hydro-cmake-modules
+
 
 More info
 -----------------------------------
